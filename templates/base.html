@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link href='https://fonts.googleapis.com/css?family=Cousine' rel='stylesheet'>
+	<style>
+		body {
+			font-family: 'Cousine';
+			font-size: 22px;
+		}
+	</style>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>{{ title }}</title>
+
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+
+</head>
+
+<body>
+
+	<div id="container">
+
+		{% block content %}
+		{% endblock %}
+
+	</div>
+
+</body>
+
+</html>

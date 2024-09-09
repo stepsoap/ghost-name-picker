@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Please select your ghost name:</h1>
+<form action="/submit" method="post">
+
+  {% for gname in ghost_names %}
+  <input type="radio" name="ghost_name" value="{{ gname['Ghost name'] }}">
+  <label for="html">{{ name[0] }} "{{ gname['Ghost name'] }}" {{ name[1] }}</label><br>
+  {% endfor %}
+
+  <input type="submit" value="Submit">
+</form>
+
+{% endblock %}

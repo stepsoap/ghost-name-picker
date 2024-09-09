@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Ghost Name Picker</h1><b>
+
+  <a href="{{ url_for( 'form' ) }}">
+    {% if ghost_name == "" %}
+    Get a Phantom name
+    {% else %}
+    Change your current Phantom name
+    {% endif %}
+  </a>
+
+  <ul style="list-style-type:none;">
+
+    {% for entry in taken %}
+    <li>{{ entry['First name'] }} "{{ entry['Ghost name'] }}" {{ entry['Family name'] }}, {{ entry['Email'] }}</li>
+    {% endfor %}
+
+
+    {% for entry in free%}
+    <li>{{ entry['Ghost name'] }}</li>
+    {% endfor %}
+
+  </ul>
+
+  {% endblock %}
