@@ -24,7 +24,7 @@ load_dotenv()
 
 # Setting up Flask
 app = Flask(__name__)
-app.secret_key = secrets.token_hex()
+app.secret_key = os.getenv("FLASK_SECRET_KEY")
 
 # Setting up OAuth
 oauth = OAuth(app)

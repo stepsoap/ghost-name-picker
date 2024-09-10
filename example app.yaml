@@ -8,3 +8,4 @@ env_variables:
   FLASK_SETTINGS_FILENAME: "settings.py"
   GOOGLE_CLIENT_ID: ""
   GOOGLE_CLIENT_SECRET: ""
+  FLASK_SECRET_KEY: ""
